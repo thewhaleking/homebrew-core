@@ -6,9 +6,9 @@ class Kea < Formula
   stable do
     # NOTE: the livecheck block is a best guess at excluding development versions.
     #       Check https://www.isc.org/download/#Kea to make sure we're using a stable version.
-    url "https://ftp.isc.org/isc/kea/2.6.2/kea-2.6.2.tar.gz"
-    mirror "https://dl.cloudsmith.io/public/isc/kea-2-6/raw/versions/2.6.2/kea-2.6.2.tar.gz"
-    sha256 "8a50b63103734b59c3b8619ccd6766d2dfee3f02e3a5f9f3abc1cd55f70fa424"
+    url "https://ftp.isc.org/isc/kea/2.6.3/kea-2.6.3.tar.gz"
+    mirror "https://dl.cloudsmith.io/public/isc/kea-2-6/raw/versions/2.6.3/kea-2.6.3.tar.gz"
+    sha256 "00241a5955ffd3d215a2c098c4527f9d7f4b203188b276f9a36250dd3d9dd612"
 
     # Backport support for Boost 1.87.0
     patch do
