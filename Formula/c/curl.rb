@@ -4,7 +4,7 @@ class Curl < Formula
   # Don't forget to update both instances of the version in the GitHub mirror URL.
   # `url` goes below this comment when the `stable` block is removed.
   url "https://curl.se/download/curl-8.14.0.tar.bz2"
-  mirror "https://github.com/curl/curl/releases/download/curl-8_13_0/curl-8.14.0.tar.bz2"
+  mirror "https://github.com/curl/curl/releases/download/curl-8_14_0/curl-8.14.0.tar.bz2"
   mirror "http://fresh-center.net/linux/www/curl-8.14.0.tar.bz2"
   mirror "http://fresh-center.net/linux/www/legacy/curl-8.14.0.tar.bz2"
   sha256 "efa1403c5ac4490c8d50fc0cabe97710abb1bf2a456e375a56d960b20a1cba80"
@@ -50,18 +50,6 @@ class Curl < Formula
 
   on_system :linux, macos: :monterey_or_older do
     depends_on "libidn2"
-  end
-
-  # Fixes failure to download certdata.txt due to a redirect
-  patch do
-    url "https://github.com/curl/curl/commit/eeed87f0563d3ca73ff53813418d1f9f03c81fe5.patch?full_index=1"
-    sha256 "f7461a8042ca8ef86492338458ccd79ee286d17773487513928d7ed6ae25818c"
-  end
-
-  # Fixes build on macOS 10.12 and earlier
-  patch do
-    url "https://github.com/curl/curl/commit/d7914f75aa8ecdd68cdbb130c1351a7432597fe4.patch?full_index=1"
-    sha256 "2ba45be5c9238abc914c2a47cd604cbd08972583b310c9079b7b7909b352001b"
   end
 
   def install
